@@ -1,0 +1,10 @@
+---
+title: "README"
+author: "Jeff Wesner"
+date: "3/31/2022"
+output: html_document
+---
+
+Project home for TroPhish. 
+
+Ridgway, J. 2022. TroPhish: Building a global database of freshwater trophic interactions. Honors Thesis. University of South Dakota.
