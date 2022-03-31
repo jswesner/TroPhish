@@ -4,48 +4,5 @@ output: html_document
 Project home for TroPhish. 
 
 Ridgway, J. 2022. TroPhish: Building a global database of freshwater trophic interactions. Honors Thesis. University of South Dakota.
-
-```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
-library(tidyverse)
-library(ggmap)
-library(janitor)
-
-Data_Fish <- read_csv(file = "data/Data_Fish.csv")
-
-
-sites <- Data_Fish %>% 
-  group_by(lat,lon) %>%
-  distinct(fish_id) %>% 
-  tally() %>% 
-  ungroup() %>% 
-  filter(!is.na(lat)) %>% 
-  mutate(lat = as.numeric(lat),
-         lon = as.numeric(lon),
-         n = as.numeric(n))
-
-
-total_diet_samples <- sum(sites$n)
-
-#get layer for the world map
-world <- map_data("world")
-
-
-#make a map
-ggplot() + 
-    geom_polygon(data = world, aes(x = long, y = lat, group = group), fill = "grey60") +  #fill is the land color
-    coord_quickmap() +
-    geom_point(data = sites, aes(x = lon, y = lat, size = n),                             #fill is the data colors. n is the size of the points  
-               shape = 21, fill = "yellow") + 
-    theme_void() +
-    labs(size = "Number of\ndiet samples",
-         title = "Diet Samples Extracted",
-         caption = paste("As of ", Sys.Date())) +
-    scale_size_continuous(breaks = c(1, 25, 50, 75, 100)) +
-    theme(panel.background = element_rect(fill = "black")) +                              #adjust the ocean color
-    annotate("text", x = -120, y = -25, 
-             label = paste("Total Diet Samples\n",total_diet_samples), color = "white",   #add the sample size text
-             size = 5)     
-
-
-```
+`
 
