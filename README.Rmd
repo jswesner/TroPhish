@@ -5,7 +5,7 @@ Project home for TroPhish.
 
 Ridgway, J. 2022. TroPhish: Building a global database of freshwater trophic interactions. Honors Thesis. University of South Dakota.
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
 library(tidyverse)
 library(ggmap)
 library(janitor)
