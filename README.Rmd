@@ -1,9 +1,3 @@
----
-title: "README"
-author: "Jeff Wesner"
-date: "3/31/2022"
-output: html_document
----
 
 Project home for TroPhish. 
 
