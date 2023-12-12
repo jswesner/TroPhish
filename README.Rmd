@@ -1,6 +1,25 @@
+---
+title: "Trophish"
+author: "Jacob Ridgway and Jeff Wesner"
+output: github_document
+bibliography: refs.bib
+---
 
-Project home for TroPhish. 
+## Summary
 
-Ridgway, J. 2022. TroPhish: Building a global database of freshwater trophic interactions. Honors Thesis. University of South Dakota.
-`
+Trophish contains dietary data gleaned from the literature for 100's of freshwater fish species. The purpose of Trophish is to allow assessment of freshwater fish stomach contents [@ridgway2022trophish].
 
+We extracted information from dietary reports ranging from the 1890's to present. The data set is located in `data/trophish_dataset.csv`.
+
+Global coverage is represented by the map below:
+
+```{r echo=FALSE, fig.cap = "Figure 1. Map of locations where dietary information was exctracted.", out.width = '100%'}
+
+knitr::include_graphics(here::here("plots/map_fish.jpg"))
+```
+
+## Approach
+
+This database was compiled through searches of the primary and secondary literature. Secondary literature included "gray" literature, defined as non peer-reviewed reports or theses. After an initial broad search, subsequent searches were targeted to fill any obvious taxonomic or geographic gaps. A full explanation is given in @ridgway2022trophish.
+
+## References
