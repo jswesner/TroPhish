@@ -127,8 +127,8 @@ site_data = trophish_dataset_stage %>%
   select(record_id, everything())  
 
 
-write_csv(trophish_dataset, file = "trophish_dataset.csv")  
-saveRDS(trophish_dataset, file = "trophish_dataset.rds")  
+write_csv(trophish_dataset, file = "data/trophish_dataset.csv")  
+saveRDS(trophish_dataset, file = "data/trophish_dataset.rds")  
 write_csv(prey_taxonomy, file = "data/prey_taxonomy.csv")  
 write_csv(fish_taxonomy, file = "data/fish_taxonomy.csv")  
 write_csv(data_sources, file = "data/data_sources.csv")  
