@@ -1,51 +1,65 @@
-Columns
-fish_id
-site_name
-predator_min_length
-predator_average_length
-predator_max_length
-length_units
-length_measure
-predator_stage
-type_of_fish
-sample_size
-start_date
-end_date
-sampling_interval
-habitat
-microhabitat
-measurement_type
-measurement_units
-author
-year
-journal
-citation
-table_figure
-notes
-prey_taxon
-prey_to_match
-measurement
-data_sorted_by
-sample_id
-site_to_match
-lon
-lat
-FishSpecies
-FishGenus
-FishFamily
-FishOrder
-FishClass
-FishSuperClass
-prey_stage
-prey_kingdom
-prey_phylum
-prey_subphylum
-prey_class
-prey_order
-prey_family
-prey_origin
-prey_superclass
-prey_subclass
-prey_type
-prey_taxa_source
-prey_note
+table,name,description
+trophish_data,start_date,Earliest date of a fish diet collected
+trophish_data,end_date,Latest date of a fish diet collected
+trophish_data,sampling_interval,"If diets are a composite, such as mean of multiple samples, then this gives the sampling interval (i.e., monthly, yearly, etc)."
+trophish_data,prey_taxon,Prey name as given in the original source
+trophish_data,data_sorted_by,"What the data were summarized over (e.g., time, season, fish size, etc.)"
+trophish_data,prey_kingdom,"Kingdom of the prey, if identifiable"
+trophish_data,source_id,"Unique ID of the dietary source (i.e., table or figure within a citation; e.g., if table 1 and table 2 are used from a single paper, these would each have unique id's)."
+trophish_data,fish_id,Unique ID of the fish diet. This - length(unique(trophish_dataset$fish_id)) - is the total number of fish diets in the database.
+trophish_data,record_id,Unique ID of the individual record (one ID per row in the main data set)
+trophish_data,fish_min_length,"Minimum length of the fish, if multiple fish were measured and reported as a summary"
+trophish_data,fish_average_length,Average length of the fish in the sample.
+trophish_data,fish_max_length,"Maximum length of the fish, if multiple fish were measured and reported as a summary"
+trophish_data,fish_length_units,"Units of length. All lengths are in ""cm"" or are missing as NA"
+trophish_data,fish_length_measure,"Type of length measure: standard length (SL), fork length (FL), or total length (TL)"
+trophish_data,habitat_loticlentic,"Whether the habitat is lentic, lotic or mixed (lentic_lotic)."
+trophish_data,diet_units,Diet value units
+trophish_data,diet_value,Diet value
+trophish_data,diet_type,Diet value type
+trophish_data,diet_percent,Diet percent - All diet values converted to a percent of a total fish's diet.
+trophish_data,longitude,"Longitude of sample location. Usually from the paper, but occasionally estimated from Google Earth"
+trophish_data,latitude,"Latitude of sample location. Usually from the paper, but occasionally estimated from Google Earth"
+trophish_data,prey_stage,"Prey life stage. If multiple life stages (e.g., larvae_adults, larvae_pupae), then the diet value includes all of those stages"
+trophish_data,prey_class,"Class of the prey, if identifiable"
+trophish_data,fish_species,"Species of the fish, if identifiable"
+trophish_data,sample_size_numeric,"Numeric of the sample_size, if identifiable"
+trophish_data,prey_origin,"Larval origin of the prey (aquatic, terrestrial. If aquatic_or_terrestrial, then the prey taxa was not exclusively aquatic or terrestrial. If NA, then the prey taxa could not be assigned or identified beyond the description given in the paper - e.g., ""bug"" or ""insects"" or ""plants"", etc.)"
+citation_data,author,Authors of the reference
+citation_data,year,Year the reference was published
+citation_data,journal,Journal the reference was published in
+citation_data,citation,Full reference
+citation_data,table_figure,Table or Figure that the data were extracted from
+citation_data,source_id,"Unique ID of the dietary source (i.e., table or figure within a citation; e.g., if table 1 and table 2 are used from a single paper, these would each have unique id's)."
+fish_taxonomy,fish_genus,"Genus of the fish, if identifiable"
+fish_taxonomy,genus,Fish genus
+fish_taxonomy,fish_family,Fish family
+fish_taxonomy,fish_order,Fish order
+fish_taxonomy,fish_class,Fish class
+fish_taxonomy,fish_super_class,Fish super class
+fish_taxonomy,record_id,Unique ID of the individual record (one ID per row in the main data set)
+original_data,measurement_type_units_original,"The originally entered measurement type (e.g., volume, abundance, etc) and measurement units (e.g., percent, total, mean, etc.)."
+original_data,type_of_fish,Name of fish given in the original paper
+original_data,habitat,"Habitat (lake, stream, creek, etc. as described by the authors)"
+original_data,notes,Notes taken during data extraction
+original_data,original_measurement,"Original measurement in the table or figure. Includes non-numeric symbols, like *, +, -, ""trace"", etc. It is converted to measurement_number (numeric) by interpreting the symbols."
+original_data,measurement_type_fixed,Detailed type of diet measurement
+original_data,total_test,Test of whether total percentages add to >1.05 or < 0. 
+original_data,prey_total,Denominator to calculate percent
+original_data,data_source,Whether the data were extracted for Trophish or pulled from FishBase.
+original_data,record_id,Unique ID of the individual record (one ID per row in the main data set)
+original_data,sample_size,"Number of fish in the sample. If >1, then the diet data are averaged over all the fish for a given sample."
+prey_taxonomy,prey_taxa_source,How the prey taxa were identified
+prey_taxonomy,prey_kingdom,"Kingdom of the prey, if identifiable"
+prey_taxonomy,prey_phylum,"Phylum of the prey, if identifiable"
+prey_taxonomy,prey_subphylum,"Subphylum of the prey, if identifiable"
+prey_taxonomy,prey_subclass,"Subclass of the prey, if identifiable"
+prey_taxonomy,prey_family,"Family of the prey, if identifiable"
+prey_taxonomy,prey_superclass,"Superclass of the prey, if identifiable"
+prey_taxonomy,prey_genus,"Genus of the prey, if identifiable"
+prey_taxonomy,prey_species,"Species of the prey, if identifiable"
+prey_taxonomy,record_id,Unique ID of the individual record (one ID per row in the main data set)
+prey_taxonomy,prey_class,"Class of the prey, if identifiable"
+prey_taxonomy,prey_order,"Order of the prey, if identifiable"
+site_data,site_name,Name and location of the stream
+site_data,record_id,Unique ID of the individual record (one ID per row in the main data set)

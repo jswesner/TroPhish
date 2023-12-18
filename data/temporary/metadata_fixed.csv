@@ -1,0 +1,86 @@
+name,new_name,description,note_for_main_dataset,note,new_table
+author,author,Authors of the reference,delete,,citation_data
+year,year,Year the reference was published,delete,,citation_data
+journal,journal,Journal the reference was published in,delete,,citation_data
+citation,citation,Full reference,delete,,citation_data
+table_figure,table_figure,Table or Figure that the data were extracted from,delete,,citation_data
+paper_id,source_id,"Unique ID of the dietary source (i.e., table or figure within a citation; e.g., if table 1 and table 2 are used from a single paper, these would each have unique id's).",keep,,citation_data
+fish_genus,fish_genus,"Genus of the fish, if identifiable",delete,,fish_taxonomy
+genus,genus,Fish genus,delete,,fish_taxonomy
+fish_family,fish_family,Fish family,delete,,fish_taxonomy
+fish_order,fish_order,Fish order,delete,,fish_taxonomy
+fish_class,fish_class,Fish class,delete,,fish_taxonomy
+fish_super_class,fish_super_class,Fish super class,delete,,fish_taxonomy
+record_id,record_id,Unique ID of the individual record (one ID per row in the main data set),keep,,fish_taxonomy
+measurement_type_units_original,measurement_type_units_original,"The originally entered measurement type (e.g., volume, abundance, etc) and measurement units (e.g., percent, total, mean, etc.).",delete,,original_data
+type_of_fish,type_of_fish,Name of fish given in the original paper,delete,,original_data
+habitat,habitat,"Habitat (lake, stream, creek, etc. as described by the authors)",delete,,original_data
+notes,notes,Notes taken during data extraction,delete,,original_data
+measurement,original_measurement,"Original measurement in the table or figure. Includes non-numeric symbols, like *, +, -, ""trace"", etc. It is converted to measurement_number (numeric) by interpreting the symbols.",delete,,original_data
+measurement_type_fixed,measurement_type_fixed,Detailed type of diet measurement,delete,,original_data
+total_test,total_test,Test of whether total percentages add to >1.05 or < 0. ,delete,,original_data
+prey_total,prey_total,Denominator to calculate percent,delete,,original_data
+data_source,data_source,Whether the data were extracted for Trophish or pulled from FishBase.,delete,,original_data
+record_id,record_id,Unique ID of the individual record (one ID per row in the main data set),keep,,original_data
+sample_size,sample_size,"Number of fish in the sample. If >1, then the diet data are averaged over all the fish for a given sample.",keep,,original_data
+prey_taxa_source,prey_taxa_source,How the prey taxa were identified,delete,,prey_taxonomy
+prey_kingdom,prey_kingdom,"Kingdom of the prey, if identifiable",delete,,prey_taxonomy
+prey_phylum,prey_phylum,"Phylum of the prey, if identifiable",delete,,prey_taxonomy
+prey_subphylum,prey_subphylum,"Subphylum of the prey, if identifiable",delete,,prey_taxonomy
+prey_subclass,prey_subclass,"Subclass of the prey, if identifiable",delete,,prey_taxonomy
+prey_family,prey_family,"Family of the prey, if identifiable",delete,,prey_taxonomy
+prey_superclass,prey_superclass,"Superclass of the prey, if identifiable",delete,,prey_taxonomy
+prey_genus,prey_genus,"Genus of the prey, if identifiable",delete,,prey_taxonomy
+prey_species,prey_species,"Species of the prey, if identifiable",delete,,prey_taxonomy
+record_id,record_id,Unique ID of the individual record (one ID per row in the main data set),keep,,prey_taxonomy
+prey_class,prey_class,"Class of the prey, if identifiable",keep,,prey_taxonomy
+prey_order,prey_order,"Order of the prey, if identifiable",keep,,prey_taxonomy
+site_name,site_name,Name and location of the stream,delete,,site_data
+record_id,record_id,Unique ID of the individual record (one ID per row in the main data set),keep,,site_data
+start_date,start_date,Earliest date of a fish diet collected,keep,,trophish_data
+end_date,end_date,Latest date of a fish diet collected,keep,,trophish_data
+sampling_interval,sampling_interval,"If diets are a composite, such as mean of multiple samples, then this gives the sampling interval (i.e., monthly, yearly, etc).",delete,,trophish_data
+prey_taxon,prey_taxon,Prey name as given in the original source,delete,,trophish_data
+data_sorted_by,data_sorted_by,"What the data were summarized over (e.g., time, season, fish size, etc.)",delete,,trophish_data
+prey_kingdom,prey_kingdom,"Kingdom of the prey, if identifiable",delete,,trophish_data
+paper_id,source_id,"Unique ID of the dietary source (i.e., table or figure within a citation; e.g., if table 1 and table 2 are used from a single paper, these would each have unique id's).",keep,,trophish_data
+fish_id,fish_id,Unique ID of the fish diet. This - length(unique(trophish_dataset$fish_id)) - is the total number of fish diets in the database.,keep,,trophish_data
+record_id,record_id,Unique ID of the individual record (one ID per row in the main data set),keep,,trophish_data
+predator_min_length,fish_min_length,"Minimum length of the fish, if multiple fish were measured and reported as a summary",keep,,trophish_data
+predator_average_length,fish_average_length,Average length of the fish in the sample.,keep,,trophish_data
+predator_max_length,fish_max_length,"Maximum length of the fish, if multiple fish were measured and reported as a summary",keep,,trophish_data
+length_units,fish_length_units,"Units of length. All lengths are in ""cm"" or are missing as NA",keep,,trophish_data
+length_measure,fish_length_measure,"Type of length measure: standard length (SL), fork length (FL), or total length (TL)",keep,,trophish_data
+habitat_loticlentic,habitat_loticlentic,"Whether the habitat is lentic, lotic or mixed (lentic_lotic).",keep,,trophish_data
+measurement_unit_fixed,diet_units,Diet value units,keep,,trophish_data
+measurement_number,diet_value,Diet value,keep,,trophish_data
+measurement_type_simple,diet_type,Diet value type,keep,,trophish_data
+measurement_percent,diet_percent,Diet percent - All diet values converted to a percent of a total fish's diet.,keep,,trophish_data
+lon,longitude,"Longitude of sample location. Usually from the paper, but occasionally estimated from Google Earth",keep,,trophish_data
+lat,latitude,"Latitude of sample location. Usually from the paper, but occasionally estimated from Google Earth",keep,,trophish_data
+prey_stage,prey_stage,"Prey life stage. If multiple life stages (e.g., larvae_adults, larvae_pupae), then the diet value includes all of those stages",keep,Need to standardize. Done on dec 18 2023,trophish_data
+prey_class,prey_class,"Class of the prey, if identifiable",keep,,trophish_data
+fish_species,fish_species,"Species of the fish, if identifiable",keep,,trophish_data
+sample_size_numeric,sample_size_numeric,"Numeric of the sample_size, if identifiable",keep,,trophish_data
+prey_origin,prey_origin,"Larval origin of the prey (aquatic, terrestrial. If aquatic_or_terrestrial, then the prey taxa was not exclusively aquatic or terrestrial. If NA, then the prey taxa could not be assigned or identified beyond the description given in the paper - e.g., ""bug"" or ""insects"" or ""plants"", etc.)",keep,,trophish_data
+fish_measure_id,fish_measure_id,Unique ID of the fish diet within a study. This may not be needed.,delete,,
+predator_stage,predator_stage,DELETE,delete,,
+microhabitat,microhabitat,DELETE,delete,,
+sample_id,sample_id,delete,delete,,
+prey_type,prey_type,delete,delete,,
+prey_note,prey_note,delete (mostly NA's),delete,,
+prey_taxon_cleaned,prey_taxon_cleaned,delete (all NA's),delete,,
+start_month,start_month,delete,delete,,
+end_month,end_month,delete,delete,,
+start_year,start_year,delete,delete,,
+end_year,end_year,delete,delete,,
+PercentEmpty,PercentEmpty,delete (mostly NA's),delete,,
+prey_taxon_database,prey_taxon_database,delete (mostly NA's),delete,,
+total,total,Total percentage for checking,delete,,
+author_year_fish,author_year_fish,delete,delete,,
+Troph,Troph,"Troph of the Troph, if identifiable",delete,,
+seTroph,seTroph,"Setroph of the seTroph, if identifiable",delete,,
+FoodI,FoodI,"Foodi of the FoodI, if identifiable",delete,,
+FoodII,FoodII,"Foodii of the FoodII, if identifiable",delete,,
+FoodIII,FoodIII,"Foodiii of the FoodIII, if identifiable",delete,,
+months_sampled,months_sampled,"Sampled of the months, if identifiable",delete,,
