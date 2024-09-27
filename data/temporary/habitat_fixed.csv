@@ -1,0 +1,31 @@
+habitat,habitat_formatted,habitat_loticlentic
+Bay,bay,lentic
+Channel,channel,lotic
+Creek,creek,lotic
+Lagoon,lagoon,lentic
+Lake,lake,lentic
+Reservoir,reservoir,lentic
+River,river,lotic
+Stream,stream,lotic
+bay,bay,lentic
+channel,channel,lotic
+creek,creek,lotic
+estuary,estuary,lentic
+lagoon,lagoon,lentic
+lake,lake,lentic
+lentic,lentic,lentic
+lentic/lotic,lentic_lotic,lentic_lotic
+lotic,lotic,lotic
+mixed,mixed,lentic_lotic
+no mention,,
+pond,pond,lentic
+ponds,pond,lentic
+pool,pool,lentic
+reservior,reservoir,lentic
+reservoir,reservoir,lentic
+river,river,lotic
+river delta,delta,lentic
+stream,stream,lotic
+swamp,swamp,lentic
+watershed,watershed,lentic_lotic
+NA,,
