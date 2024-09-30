@@ -191,22 +191,13 @@ saveRDS(diff_plot_continent, file = "plots/diff_plot_continent.rds")
 
 # table of taxa -----------------------------------------------------------
 
-data_fish_continent %>% 
-  group_by(fish_order) %>% 
-  distinct(fish_species) %>% 
-  tally()
+taxon_table = readRDS(file = "data/taxon_table.rds")
 
-# old -----------------------------------------------
-
-# # load data from code above. Add continent information
-# fishbase_fresh = readRDS(file = "data/fishbase_fresh.rds") %>% left_join(country_fishbase_continent_added %>% 
-#                                                                            distinct(Family, continent))
-# trophish_fresh = readRDS(file = "data/trophish_fresh.rds")
-# 
-# 
-# data_fish_continent %>% dplyr::select(fish_species, fish_family, region) %>% rename(continent = region) %>% 
-#   bind_rows(country_fishbase_continent_added %>% dplyr::select(species, family, continent))
-# 
-
+taxon_table %>% 
+  # unite(col = taxon_source, taxon,source, sep = "_") %>% 
+  # distinct() %>% 
+  pivot_wider(names_from = source, values_from = n) %>% 
+  mutate(prop = trophish/fishbase) %>% 
+  write_csv("tables/taxon_table.csv")
 
        

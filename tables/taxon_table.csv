@@ -1,0 +1,15 @@
+continent,taxon,fishbase,trophish,prop
+Africa,species,3689,228,0.06180536730821361
+Asia,species,6420,303,0.04719626168224299
+Europe,species,904,182,0.2013274336283186
+North America,species,1994,268,0.13440320962888666
+Oceania,species,956,149,0.15585774058577406
+Seven seas (open ocean),species,557,118,0.2118491921005386
+South America,species,5875,237,0.04034042553191489
+Africa,families,107,60,0.5607476635514018
+Asia,families,183,82,0.44808743169398907
+Europe,families,56,40,0.7142857142857143
+North America,families,120,69,0.575
+Oceania,families,124,60,0.4838709677419355
+Seven seas (open ocean),families,101,54,0.5346534653465347
+South America,families,106,62,0.5849056603773585
