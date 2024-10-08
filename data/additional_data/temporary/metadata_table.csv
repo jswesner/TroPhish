@@ -1,0 +1,56 @@
+name,table,description
+fish_species,trophish_data,"Species of the fish, if identifiable"
+prey_kingdom,trophish_data,"Kingdom of the prey, if identifiable"
+prey_taxon,trophish_data,Prey name as given in the original source
+prey_class,trophish_data,"Class of the prey, if identifiable"
+prey_origin,trophish_data,"Larval origin of the prey (aquatic, terrestrial. If aquatic_or_terrestrial, then the prey taxa was not exclusively aquatic or terrestrial. If NA, then the prey taxa could not be assigned or identified beyond the description given in the paper - e.g., ""bug"" or ""insects"" or ""plants"", etc.)"
+prey_stage,trophish_data,"Prey life stage. If multiple life stages (e.g., larvae_adults, larvae_pupae), then the diet value includes all of those stages"
+diet_value,trophish_data,Diet value
+diet_units,trophish_data,Diet value units
+diet_type,trophish_data,Diet value type
+diet_percent,trophish_data,Diet percent - All diet values converted to a percent of a total fish's diet.
+record_id,trophish_data,Unique ID of the individual record (one ID per row in the main data set)
+source_id,trophish_data,"Unique ID of the dietary source (i.e., table or figure within a citation; e.g., if table 1 and table 2 are used from a single paper, these would each have unique id's)."
+fish_id,trophish_data,Unique ID of the fish diet. This - length(unique(trophish_dataset$fish_id)) - is the total number of fish diets in the database.
+start_date,trophish_data,Earliest date of a fish diet collected
+end_date,trophish_data,Latest date of a fish diet collected
+sampling_interval,trophish_data,"If diets are a composite, such as mean of multiple samples, then this gives the sampling interval (i.e., monthly, yearly, etc)."
+data_sorted_by,trophish_data,"What the data were summarized over (e.g., time, season, fish size, etc.)"
+fish_min_length,trophish_data,"Minimum length of the fish, if multiple fish were measured and reported as a summary"
+fish_average_length,trophish_data,Average length of the fish in the sample.
+fish_max_length,trophish_data,"Maximum length of the fish, if multiple fish were measured and reported as a summary"
+fish_length_units,trophish_data,"Units of length. All lengths are in ""cm"" or are missing as NA"
+fish_length_measure,trophish_data,"Type of length measure: standard length (SL), fork length (FL), or total length (TL)"
+habitat_loticlentic,trophish_data,"Whether the habitat is lentic, lotic or mixed (lentic_lotic)."
+longitude,trophish_data,"Longitude of sample location. Usually from the paper, but occasionally estimated from Google Earth"
+latitude,trophish_data,"Latitude of sample location. Usually from the paper, but occasionally estimated from Google Earth"
+sample_size_numeric,trophish_data,"Numeric of the sample_size, if identifiable"
+record_id,prey_taxonomy,Unique ID of the individual record (one ID per row in the main data set)
+prey_taxa_source,prey_taxonomy,How the prey taxa were identified
+prey_kingdom,prey_taxonomy,"Kingdom of the prey, if identifiable"
+prey_phylum,prey_taxonomy,"Phylum of the prey, if identifiable"
+prey_subphylum,prey_taxonomy,"Subphylum of the prey, if identifiable"
+prey_subclass,prey_taxonomy,"Subclass of the prey, if identifiable"
+prey_family,prey_taxonomy,"Family of the prey, if identifiable"
+prey_superclass,prey_taxonomy,"Superclass of the prey, if identifiable"
+prey_genus,prey_taxonomy,"Genus of the prey, if identifiable"
+prey_species,prey_taxonomy,"Species of the prey, if identifiable"
+prey_class,prey_taxonomy,"Class of the prey, if identifiable"
+prey_order,prey_taxonomy,"Order of the prey, if identifiable"
+record_id,fish_taxonomy,Unique ID of the individual record (one ID per row in the main data set)
+fish_genus,fish_taxonomy,"Genus of the fish, if identifiable"
+genus,fish_taxonomy,Fish genus
+fish_family,fish_taxonomy,Fish family
+fish_order,fish_taxonomy,Fish order
+fish_class,fish_taxonomy,Fish class
+fish_super_class,fish_taxonomy,Fish super class
+source_id,data_sources,NA
+author,data_sources,NA
+year,data_sources,NA
+journal,data_sources,NA
+citation,data_sources,NA
+table_figure,data_sources,NA
+record_id,site_data,Unique ID of the individual record (one ID per row in the main data set)
+site_name,site_data,Name and location of the stream
+country,site_data,NA
+continent,site_data,NA
