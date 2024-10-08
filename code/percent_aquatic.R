@@ -5,7 +5,7 @@ library(brms)
 library(ggthemes)
 
 fish_taxonomy <- read_csv("data/fish_taxonomy.csv")
-data_fish_beta_with_fishbase <- readRDS("data/trophish_dataset.rds") %>% 
+data_fish_beta_with_fishbase <- read_csv("data/trophish_dataset.csv") %>% 
   left_join(fish_taxonomy)
 
 #percent terrestrial
@@ -37,7 +37,7 @@ prop_terr_plot <- data_fish_beta_with_fishbase %>%
   # guides(color = guide_legend(override.aes = list(size = 1))) +
   NULL
 
-ggview::ggview(prop_terr_plot, width = 5, height = 3.5)
+# ggview::ggview(prop_terr_plot, width = 5, height = 3.5)
 ggsave(prop_terr_plot, file = "plots/prop_terr_plot.jpg", width = 5, height = 3.5, dpi = 600)
 
 

@@ -2,7 +2,7 @@ library(tidyverse)
 library(ggmap)
 library(janitor)
 
-Data_Fish <- readRDS(file = "data/trophish_dataset.rds")
+Data_Fish <- readRDS(file = "data/trophish_everything.rds")
 
 
 sites <- Data_Fish %>% 
